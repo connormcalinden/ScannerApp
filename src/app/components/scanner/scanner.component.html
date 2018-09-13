@@ -1,0 +1,10 @@
+<div [hidden]="!hasCameras">
+  <zxing-scanner
+    #scanner
+    start="true"
+    [device]="selectedDevice"
+    (scanSuccess)="handleQrCodeResult($event)"
+  ></zxing-scanner>
+</div>
+
+<div [hidden]="hasCameras">No cameras have been found.</div>

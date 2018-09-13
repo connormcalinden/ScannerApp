@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  activateScan = false;
+  asset: string = undefined;
+
+  scannedItem(assetId) {
+    this.activateScan = false;
+    this.asset = assetId;
+  }
 }
